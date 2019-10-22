@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-cloak>
     <header id="header" class="header shadow">
       <h1 class="text-right display-4">Sobre Nosotros</h1>
       <h3 class="text-right display-5">Conoce al equipo Mline</h3>
@@ -19,12 +19,8 @@
           />
           <h4 class="subtitle my-3 border-bottom">Mline</h4>
           <p class="text-justify">
-            Mline es una empresa que se origina por la necesidad de satisfacer
-            el mercado en software, que permitan a las empresas; vender,
-            comprar, cobrar y pagar, obteniendo información en línea y
-            Confiable, con Reportes Dinámicos que permitan tomar decisiones. El
-            mercado nos ha llevado a ser la respuesta para solucionar problemas
-            a medida, potenciando la gestión de la empresa.
+            Hemos logrado desarrollar soluciones o software que han permitido a
+            nuestros clientes, gestionar procesos y confiar en sus números.
           </p>
         </article>
         <article class="col">
@@ -60,21 +56,15 @@
       id="AboutMline"
     >
       <div class="black-transparent p-5 m-5 rounded shadow">
-        <h4 class="border-bottom my-2 text-left">¿Que es Mline?</h4>
+        <h4 class="border-bottom my-2">¿Que es Mline?</h4>
         <div class="row">
           <p class="col text-justify">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p class="col text-justify">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
+            Mline es una empresa que se origina por la necesidad de satisfacer
+            el mercado en software, que permitan a las empresas; vender,
+            comprar, cobrar y pagar, obteniendo información en línea y
+            Confiable, con Reportes Dinámicos que permitan tomar decisiones. El
+            mercado nos ha llevado a ser la respuesta para solucionar problemas
+            a medida, potenciando la gestión de la empresa.
           </p>
         </div>
       </div>

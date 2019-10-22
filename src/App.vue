@@ -1,13 +1,33 @@
 <template>
   <div id="app" v-cloak class="container-fluid p-0">
     <header id="content-wrapper" class="container-fluid m-0 p-3">
-      <nav id="nav" class="row">
-        <img
-          alt="Logo Mline"
-          class="img-fluid col-2 rounded"
-          src="./assets/logomlinespa-2.png"
-        />
-        <div class="col-8 offset-2 my-auto">
+      <nav id="nav" class="navbar navbar-expand-lg">
+        <div class="d-flex flex-row align-items-center">
+          <div class="mr-2">
+            <button
+              class="navbar-toggler btn btn-outline-light"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <font-awesome-icon :icon="['fas', 'bars']" />
+            </button>
+          </div>
+          <a class="navbar-brand" href="#">
+            <img
+              alt="Logo Mline"
+              class="img-fluid"
+              src="./assets/logomlinespa-2.png"
+            />
+          </a>
+        </div>
+        <div
+          id="navbarTogglerDemo03"
+          class="col-8 offset-2 collapse navbar-collapse my-auto"
+        >
           <router-link class="btn btn-outline-light mx-2 border-0" to="/"
             >Home <font-awesome-icon :icon="['fas', 'home']"
           /></router-link>
@@ -32,7 +52,9 @@
         </div>
       </nav>
     </header>
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
     <footer class="container-fluid text-light px-5 pt-5">
       <div class="row">
         <div class="col d-flex flex-column border-right">
@@ -58,8 +80,15 @@
           <router-link class="nav-link" to="/contacto">Contacto</router-link>
           <router-link class="nav-link" to="/soporte">Soporte</router-link>
         </div>
-        <div class="col d-flex flex-column border-right">
+        <div class="col d-none d-lg-flex flex-column border-right">
           <h4>Nuestras Redes Sociales</h4>
+          <iframe
+            class="img-fluid"
+            src="https://www.youtube.com/embed/b2LnFE1qTig"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <div class="col d-flex flex-column">
           <h4>Nosotros</h4>
@@ -89,20 +118,49 @@
 </template>
 
 <style lang="scss">
-header {
-  background-color: rgba(0, 0, 0, 0);
-}
-#nav {
-  a {
-    font-weight: bold;
-    &.router-link-exact-active {
-      background-color: $dark;
-      color: $light;
+@media (min-width: 0) {
+
+  #navbarTogglerDemo03 {
+    background-color: $dark;
+    border-radius: 30px;
+  }
+
+  #nav {
+    a {
+      font-weight: bold;
+      &.router-link-exact-active {
+        background-color: $dark;
+        color: $light;
+      }
     }
   }
+  footer {
+    background-color: $dark;
+  }
 }
-footer {
-  background-color: $dark;
+@media (min-width: 992px) {
+  #navbarTogglerDemo03 {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  #nav {
+    a {
+      font-weight: bold;
+      &.router-link-exact-active {
+        background-color: $dark;
+        color: $light;
+      }
+    }
+  }
+  footer {
+    background-color: $dark;
+  }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 [v-cloak] {
   display: block;
