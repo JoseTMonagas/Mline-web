@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-cloak class="container-fluid p-0">
+  <div id="app" data-view v-cloak class="container-fluid p-0">
     <header id="content-wrapper" class="container-fluid m-0 p-3">
       <nav id="nav" class="navbar navbar-expand-lg">
         <div class="d-flex flex-row align-items-center">

@@ -1,41 +1,41 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: Home
+      path: '/',
+      name: 'home',
+      component: Home,
     },
     {
-      path: "/nosotros",
-      name: "nosotros",
+      path: '/nosotros',
+      name: 'nosotros',
       component: () =>
-        import(/* webpackchunkname: "about" */ "./views/AboutUs.vue")
+        import(/* webpackchunkname: "about" */ './views/AboutUs.vue'),
     },
     {
-      path: "/servicios",
-      name: "Servicio",
+      path: '/servicios',
+      name: 'Servicio',
       component: () =>
-        import(/* webpackchunkname: "about" */ "./views/Service.vue")
+        import(/* webpackchunkname: "about" */ './views/Service.vue'),
     },
     {
-      path: "/contacto",
-      name: "Contact",
+      path: '/contacto',
+      name: 'Contact',
       component: () =>
-        import(/* webpackchunkname: "about" */ "./views/Contact.vue")
+        import(/* webpackchunkname: "about" */ './views/Contact.vue'),
     },
     {
-      path: "/soporte",
-      name: "Support",
+      path: '/soporte',
+      name: 'Support',
       component: () =>
-        import(/* webpackchunkname: "about" */ "./views/Support.vue")
+        import(/* webpackchunkname: "about" */ './views/Support.vue'),
     },
-  ]
+  ],
 });
