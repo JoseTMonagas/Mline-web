@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak>
+  <div data-view v-cloak>
     <header id="header" class="header shadow">
       <h1 class="text-right display-4">Soporte</h1>
       <h3 class="text-right display-5">¿Necesitas ayuda?</h3>

@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak>
+  <div data-view v-cloak>
     <header id="header" class="header shadow">
       <h1 class="text-center display-4">Dale vida a tus proyectos con Mline</h1>
       <h3 class="text-center display-5">Soluciones en Gestión</h3>
